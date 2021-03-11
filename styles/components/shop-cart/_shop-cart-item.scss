@@ -1,0 +1,29 @@
+.shop-cart-item {
+  padding: $indent-small 0;
+
+  &__error {
+    background-color: $light-red;
+    border-radius: $radius-large;
+    padding: $indent-small;
+    margin-top: $indent-xsmall;
+
+    &-text {
+      color: $primary-red;
+    }
+  }
+
+  &__price {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-title;
+
+    &-count {
+      font-weight: $font-weight-regular;
+      font-size: $font-size-body;
+      color: $dark-gray;
+    }
+  }
+
+  &__delete-btn {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,16 @@
+.shop-catalog-group {
+  &__title {
+    background-color: $dark-blue;
+    color: $white-color;
+    padding: $indent-xsmall $indent-small;
+    margin: 0 0 $indent-small 0;
+  }
+
+  &__content {
+    padding: 0;
+  }
+
+  &__group-item {
+    margin-bottom: $indent-small;
+  }
+}

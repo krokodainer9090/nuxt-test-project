@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShopCart should render cart with item 1`] = `
+"<section class=\\"shop-cart\\">
+  <div class=\\"container\\">
+    <div class=\\"shop-cart__content\\">
+      <h2 class=\\"shop-cart__title\\">Корзина</h2>
+      <div class=\\"shop-cart__header\\">
+        <div class=\\"row\\">
+          <div class=\\"col-6\\"><span class=\\"shop-cart__header-text\\">
+              Наименование товара и описание
+            </span></div>
+          <div class=\\"col-2\\"><span class=\\"shop-cart__header-text\\">
+              Количество
+            </span></div>
+          <div class=\\"col-4\\"><span class=\\"shop-cart__header-text\\">
+              Цена
+            </span></div>
+        </div>
+      </div>
+      <div class=\\"shop-cart__content\\">
+        <shopcartitem-stub cartitem=\\"[object Object]\\"></shopcartitem-stub>
+      </div>
+      <div class=\\"shop-cart__sum\\"><span class=\\"shop-cart__sum-text\\">
+          Общая стоимость: <span class=\\"shop-cart__sum-text-price\\">42.8 руб.</span></span></div>
+    </div>
+  </div>
+</section>"
+`;
+
+exports[`ShopCart should render empty cart 1`] = `
+"<section class=\\"shop-cart\\">
+  <div class=\\"container\\">
+    <div class=\\"shop-cart__content\\">
+      <h2 class=\\"shop-cart__title\\">Корзина</h2>
+      <div class=\\"shop-cart__header\\">
+        <div class=\\"row\\">
+          <div class=\\"col-6\\"><span class=\\"shop-cart__header-text\\">
+              Наименование товара и описание
+            </span></div>
+          <div class=\\"col-2\\"><span class=\\"shop-cart__header-text\\">
+              Количество
+            </span></div>
+          <div class=\\"col-4\\"><span class=\\"shop-cart__header-text\\">
+              Цена
+            </span></div>
+        </div>
+      </div>
+      <div class=\\"shop-cart__content\\"></div>
+      <!---->
+    </div>
+  </div>
+</section>"
+`;

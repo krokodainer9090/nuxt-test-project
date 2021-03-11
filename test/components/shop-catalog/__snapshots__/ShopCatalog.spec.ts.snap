@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShopCatalog should render catalog with groups 1`] = `
+"<section class=\\"shop-catalog w-100\\">
+  <div class=\\"container\\">
+    <h2 class=\\"shop-catalog__title\\">Каталог магазина</h2>
+    <div class=\\"row\\">
+      <shopcataloggroup-stub group=\\"[object Object]\\" class=\\"shop-catalog__group col-12 col-md-6\\"></shopcataloggroup-stub>
+      <shopcataloggroup-stub group=\\"[object Object]\\" class=\\"shop-catalog__group col-12 col-md-6\\"></shopcataloggroup-stub>
+      <shopcataloggroup-stub group=\\"[object Object]\\" class=\\"shop-catalog__group col-12 col-md-6\\"></shopcataloggroup-stub>
+      <shopcataloggroup-stub group=\\"[object Object]\\" class=\\"shop-catalog__group col-12 col-md-6\\"></shopcataloggroup-stub>
+      <shopcataloggroup-stub group=\\"[object Object]\\" class=\\"shop-catalog__group col-12 col-md-6\\"></shopcataloggroup-stub>
+    </div>
+  </div>
+</section>"
+`;
+
+exports[`ShopCatalog should render empty catalog 1`] = `
+"<section class=\\"shop-catalog w-100\\">
+  <div class=\\"container\\">
+    <h2 class=\\"shop-catalog__title\\">Каталог магазина</h2>
+    <div class=\\"row\\"></div>
+  </div>
+</section>"
+`;

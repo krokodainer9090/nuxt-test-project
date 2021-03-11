@@ -1,0 +1,50 @@
+/* Breakpoints */
+$breakpoints: (
+  '': '',
+  '-sm': 576px,
+  '-md': 768px,
+  '-lg': 992px,
+  '-xl': 1140px,
+);
+
+
+/** Typography */
+$font-size-caption: 12px;
+$font-size-body: 14px;
+$font-size-subheading: 16px;
+$font-size-heading: 18px;
+$font-size-title: 20px;
+$font-size-headline: 24px;
+$font-size-display-1: 36px;
+
+$line-height-caption: 20px;
+$line-height-body: 24px;
+$line-height-subheading: 24px;
+$line-height-heading: 26px;
+$line-height-title: 28px;
+$line-height-headline: 32px;
+$line-height-display-1: 40px;
+$line-height-display-2: 48px;
+
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 700;
+$font-weight-black: 800;
+
+/** Radius */
+$radius-small: 2px;
+$radius-medium: 4px;
+$radius-large: 8px;
+$radius-xlarge: 16px;
+$radius-full: 50%;
+
+/* Indents */
+$indent-xsmall: 4px;
+$indent-small: 8px;
+$indent-medium: 16px;
+$indent-large: 24px;
+$indent-xlarge: 40px;
+$indent-xxlarge: 68px;
+$indent-xxxlarge: 72px;

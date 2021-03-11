@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    container_name: proxy_nginx
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./logs:/var/log/nginx/
+      - ./static:/var/www/static
+  nuxt:
+    # This defines the configuration options, including the context and dockerfile,
+    # that will be applied when Compose builds the application image.
+    build:
+      # This defines the build context for the image build — in this case, the current project directory.
+      context: .
+      # This specifies the Dockerfile in your current project directory as the file
+      dockerfile: Dockerfile
+    image: nuxt-app-image
+    container_name: nuxt-app
+    # This defines the restart policy. The default is no,
+    # but we have set the container to restart unless it is stopped.
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      # This maps port from .env on the host to same port number on the container.
+      - '$PORT:$PORT'

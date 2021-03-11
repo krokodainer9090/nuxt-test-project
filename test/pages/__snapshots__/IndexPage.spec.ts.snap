@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexPage should render IndexPage 1`] = `
+"<div class=\\"index-page\\">
+  <shopcatalog-stub class=\\"index-page__catalog\\"></shopcatalog-stub>
+  <shopcart-stub class=\\"index-page__cart\\"></shopcart-stub>
+</div>"
+`;

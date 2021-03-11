@@ -1,0 +1,62 @@
+@use 'sass:map';
+
+@import "params";
+@import "mixins";
+@import "reset";
+
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.no-gutters {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  & > .col, & > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+@function map-get-strict($map, $key) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  } @else {
+    @error "ERROR: Такого index'а нету:/";
+  }
+}
+
+@each $size, $min_width in $breakpoints {
+  @include media-query($min_width) {
+    // Use if padding in design not 15px
+    //$local_container_gutter: map-get-strict($container_gutters, $size);
+    //$local_row_gutter: map-get-strict($row_gutters, $size);
+    .container {
+      max-width: map-get($container_sizes, $size) ;
+      //padding-right: $local_container_gutter;
+      //padding-left: $local_container_gutter;
+    }
+    //.row {
+      //margin-left:  $local_row_gutter * -1;
+      //margin-right: $local_row_gutter * -1;
+    //}
+    @include create-grid($size);
+    @include create-order($size);
+  }
+}

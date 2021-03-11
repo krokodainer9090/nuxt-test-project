@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShopCatalogGroupItem should render empty item 1`] = `
+"<div class=\\"shop-catalog-group-item\\">
+  <div class=\\"shop-catalog-group-item__content\\">
+    <!---->
+    <div class=\\"shop-catalog-group-item__price-container\\">
+      <!---->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ShopCatalogGroupItem should render item 1`] = `
+"<div class=\\"shop-catalog-group-item\\">
+  <div class=\\"shop-catalog-group-item__content\\"><span class=\\"shop-catalog-group-item__name\\">
+      Суп с пекинской капустой(15)
+    </span>
+    <div class=\\"shop-catalog-group-item__price-container\\"><span class=\\"shop-catalog-group-item__price\\">
+        42.8
+      </span></div>
+  </div>
+</div>"
+`;

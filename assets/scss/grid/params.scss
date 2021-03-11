@@ -1,0 +1,53 @@
+$columns_count: 12;
+
+$container_sizes: (
+  '': none,
+  '-sm': 540px,
+  '-md': 748px,
+  '-lg': 870px,
+  '-xl': 1400px,
+);
+
+$container_gutters: (
+  '': 5px,
+  '-sm': 10px,
+  '-md': 15px,
+  '-lg': 20px,
+  '-xl': 20px,
+);
+
+$row_gutters: (
+  '': 5px,
+  '-sm': 10px,
+  '-md': 15px,
+  '-lg': 20px,
+  '-xl': 20px,
+);
+
+$col_gutters: (
+  '': (
+    '': 15px,
+    '-sm': 15px,
+    '-md': 15px,
+    '-lg': 20px,
+    '-xl': 20px,
+  ),
+  '-sm': (
+    '-sm': 15px,
+    '-md': 15px,
+    '-lg': 20px,
+    '-xl': 20px,
+  ),
+  '-md': (
+    '-md': 15px,
+    '-lg': 20px,
+    '-xl': 20px,
+  ),
+  '-lg': (
+    '-lg': 20px,
+    '-xl': 20px,
+  ),
+  '-xl': (
+    '-xl': 20px,
+  ),
+);

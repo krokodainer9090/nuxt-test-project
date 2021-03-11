@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShopCatalogGroup should render empty group 1`] = `
+"<div class=\\"shop-catalog-group\\">
+  <h3 class=\\"shop-catalog-group__title\\"></h3>
+  <div class=\\"shop-catalog-group__content container\\">
+    <div class=\\"row\\"></div>
+  </div>
+</div>"
+`;
+
+exports[`ShopCatalogGroup should render group with items 1`] = `
+"<div class=\\"shop-catalog-group\\">
+  <h3 class=\\"shop-catalog-group__title\\">Группа 1</h3>
+  <div class=\\"shop-catalog-group__content container\\">
+    <div class=\\"row\\">
+      <shopcataloggroupitem-stub item=\\"[object Object]\\" class=\\"shop-catalog-group__group-item col-12 col-xl-6\\"></shopcataloggroupitem-stub>
+      <shopcataloggroupitem-stub item=\\"[object Object]\\" class=\\"shop-catalog-group__group-item col-12 col-xl-6\\"></shopcataloggroupitem-stub>
+      <shopcataloggroupitem-stub item=\\"[object Object]\\" class=\\"shop-catalog-group__group-item col-12 col-xl-6\\"></shopcataloggroupitem-stub>
+    </div>
+  </div>
+</div>"
+`;

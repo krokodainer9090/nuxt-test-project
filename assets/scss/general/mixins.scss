@@ -1,0 +1,8 @@
+// General mixins (not for bootstrap classes)
+
+// Element must be `display: block` or `display: inline-block` to work.
+@mixin overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
