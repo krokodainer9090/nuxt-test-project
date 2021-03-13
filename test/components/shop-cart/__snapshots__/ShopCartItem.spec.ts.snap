@@ -7,10 +7,7 @@ exports[`ShopCartItem should handler error currentCount 1`] = `
         Суп с пекинской капустой
       </span></div>
     <div class=\\"col-2\\">
-      <input-stub id=\\"1\\" value=\\"0\\" type=\\"number\\" min=\\"0\\" validationtype=\\"[object Object]\\" class=\\"shop-cart-item__input\\"></input-stub>
-      <div class=\\"shop-cart-item__error\\"><span class=\\"shop-cart-item__error-text\\">
-          Столько товара на складе нет. Осталось товара: 15 шт.
-        </span></div>
+      <input-stub id=\\"1\\" value=\\"0\\" type=\\"number\\" min=\\"0\\" validationtype=\\"[object Object]\\" errortext=\\" Столько товара на складе нет. Осталось товара: 15 шт.\\" class=\\"shop-cart-item__input\\"></input-stub>
     </div>
     <div class=\\"col-2 col-md-3\\"><span class=\\"shop-cart-item__price\\">
         42.8 руб.
@@ -31,8 +28,7 @@ exports[`ShopCartItem should render empty item 1`] = `
       <!---->
     </div>
     <div class=\\"col-2\\">
-      <input-stub id=\\"1\\" value=\\"undefined\\" type=\\"number\\" min=\\"0\\" validationtype=\\"[object Object]\\" class=\\"shop-cart-item__input\\"></input-stub>
-      <!---->
+      <input-stub id=\\"1\\" value=\\"undefined\\" type=\\"number\\" min=\\"0\\" validationtype=\\"[object Object]\\" errortext=\\" Столько товара на складе нет. Осталось товара: undefined шт.\\" class=\\"shop-cart-item__input\\"></input-stub>
     </div>
     <div class=\\"col-2 col-md-3\\">
       <!---->
@@ -53,8 +49,7 @@ exports[`ShopCartItem should render item 1`] = `
         Суп с пекинской капустой
       </span></div>
     <div class=\\"col-2\\">
-      <input-stub id=\\"1\\" value=\\"0\\" type=\\"number\\" min=\\"0\\" validationtype=\\"[object Object]\\" class=\\"shop-cart-item__input\\"></input-stub>
-      <!---->
+      <input-stub id=\\"1\\" value=\\"0\\" type=\\"number\\" min=\\"0\\" validationtype=\\"[object Object]\\" errortext=\\" Столько товара на складе нет. Осталось товара: 15 шт.\\" class=\\"shop-cart-item__input\\"></input-stub>
     </div>
     <div class=\\"col-2 col-md-3\\"><span class=\\"shop-cart-item__price\\">
         42.8 руб.
