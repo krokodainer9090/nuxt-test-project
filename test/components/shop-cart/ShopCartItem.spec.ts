@@ -7,7 +7,6 @@ import { shopCatalogItem } from '~/test/utils/misc/constants';
 
 // Constants
 const CLASS_NAME = '.shop-cart-item';
-
 const classes = {
   input: `${CLASS_NAME}__input`,
   deleteBtn: `${CLASS_NAME}__delete-btn`
@@ -58,16 +57,10 @@ describe('ShopCartItem', () => {
         cartItem: shopCatalogItem
       }
     });
-    const emitObject = wrapper.emitted();
-
     // Check error increase count of item
-    await wrapper.setData({
-      currentItemCount: shopCatalogItem.count + 1
-    });
+    await wrapper.find(classes.input).vm.$emit('on-error', true);
 
-    // // No emit if error
-    expect(emitObject['increase-count']?.[0]).toBeUndefined();
-
+    expect(wrapper.vm.isError).toBe(true);
     expect(wrapper.html()).toMatchSnapshot();
   });
 });

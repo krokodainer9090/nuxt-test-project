@@ -16,27 +16,23 @@ export default {
     }
   },
 
-  data: () => ({
-    isError: false
-  }),
+  data () {
+    const { currentCount } = this.cartItem;
+
+    return {
+      isError: false,
+      currentCount
+    };
+  },
 
   computed: {
     currentItemCount: {
       get () {
-        return String(this.cartItem.currentCount);
+        return String(this.currentCount);
       },
 
       set (currentCount) {
-        if ( currentCount <= this.cartItem.count ) {
-          this.isError = false;
-
-          this.$emit('increase-count', {
-            id: this.cartItem.id,
-            count: currentCount
-          });
-        } else {
-          this.isError = true;
-        }
+        this.currentCount = Number(currentCount);
       }
     },
 
@@ -48,12 +44,34 @@ export default {
       return this.cartItem?.price
         ? `${this.cartItem.price} руб.`
         : '';
+    },
+
+    validationType () {
+      return {
+        name: 'lessOrEqualNumber',
+        value: this.cartItem.count
+      };
+    }
+  },
+
+  watch: {
+    currentItemCount (currentCount) {
+      if ( !this.isError ) {
+        this.$emit('increase-count', {
+          id: this.cartItem.id,
+          count: Number(currentCount)
+        });
+      }
     }
   },
 
   methods: {
     deleteItem () {
       this.$emit('delete-item', this.cartItem.id);
+    },
+
+    onError (isError) {
+      this.isError = isError;
     }
   }
 };
@@ -74,7 +92,9 @@ export default {
         <Input
           v-model="currentItemCount"
           type="number"
+          :validation-type="validationType"
           class="shop-cart-item__input"
+          @on-error="onError"
         />
         <div
           v-if="isError"

@@ -75,10 +75,7 @@ export default {
             @delete-item="deleteItem"
           />
         </div>
-        <div
-          v-if="userCartSum"
-          class="shop-cart__sum"
-        >
+        <div class="shop-cart__sum">
           <span class="shop-cart__sum-text">
             Общая стоимость: <span class="shop-cart__sum-text-price">{{ userCartSum }} руб.</span>
           </span>

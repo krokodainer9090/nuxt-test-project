@@ -1,4 +1,7 @@
 <script>
+// Helpers
+import validations from "~/assets/ts/validations";
+
 const numberRegex = /^\d*$/;
 
 export default {
@@ -20,8 +23,16 @@ export default {
     min: {
       type: Number,
       default: 0
+    },
+    validationType: {
+      type: Object,
+      default: _ => ({})
     }
   },
+
+  data: () => ({
+    isError: false
+  }),
 
   computed: {
     isNumberInput () {
@@ -38,6 +49,18 @@ export default {
   },
 
   methods: {
+    validate (inputValue) {
+      if ( Object.keys(this.validationType).length ) {
+        const { name, value } = this.validationType;
+        const validationFunc = validations[name];
+
+        if ( validationFunc ) {
+          this.isError = !validationFunc(inputValue, value);
+          this.$emit('on-error', this.isError);
+        }
+      }
+    },
+
     numberEventListener (unbind = false) {
       if (!this.$refs.input) { return; }
 
@@ -62,7 +85,8 @@ export default {
       });
     },
 
-    getValue ({ target }) {
+    onInput ({ target }) {
+      this.validate(target.value);
       this.$emit('input', target.value);
     }
   }
@@ -78,7 +102,7 @@ export default {
       :value="value"
       :min="min"
       class="input"
-      @input="getValue"
+      @input="onInput"
     >
   </div>
 </template>

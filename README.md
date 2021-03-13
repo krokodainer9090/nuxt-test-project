@@ -1,5 +1,7 @@
 # Nuxt-Test-Project
 
+## Before installation
+Copy .env.example to .env
 
 ## Build dev (with Docker)
 ```bash

@@ -47,7 +47,8 @@ exports[`ShopCart should render empty cart 1`] = `
         </div>
       </div>
       <div class=\\"shop-cart__content\\"></div>
-      <!---->
+      <div class=\\"shop-cart__sum\\"><span class=\\"shop-cart__sum-text\\">
+          Общая стоимость: <span class=\\"shop-cart__sum-text-price\\">0 руб.</span></span></div>
     </div>
   </div>
 </section>"
