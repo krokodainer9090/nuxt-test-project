@@ -27,6 +27,10 @@ export default {
     validationType: {
       type: Object,
       default: _ => ({})
+    },
+    errorText: {
+      type: String,
+      default: ''
     }
   },
 
@@ -104,6 +108,14 @@ export default {
       class="input"
       @input="onInput"
     >
+    <div
+      v-if="isError"
+      class="input__error"
+    >
+      <span class="input__error-text">
+        {{ errorText }}
+      </span>
+    </div>
   </div>
 </template>
 

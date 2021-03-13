@@ -51,6 +51,10 @@ export default {
         name: 'lessOrEqualNumber',
         value: this.cartItem.count
       };
+    },
+
+    errorText () {
+      return ` Столько товара на складе нет. Осталось товара: ${this.cartItem.count} шт.`;
     }
   },
 
@@ -93,17 +97,10 @@ export default {
           v-model="currentItemCount"
           type="number"
           :validation-type="validationType"
+          :error-text="errorText"
           class="shop-cart-item__input"
           @on-error="onError"
         />
-        <div
-          v-if="isError"
-          class="shop-cart-item__error"
-        >
-          <span class="shop-cart-item__error-text">
-            Столько товара на складе нет. Осталось товара: {{ cartItem.count }} шт.
-          </span>
-        </div>
       </div>
       <div class="col-2 col-md-3">
         <span

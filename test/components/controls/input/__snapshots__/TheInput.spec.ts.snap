@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TheInput should render input 1`] = `"<div class=\\"input__container\\"><input id=\\"1\\" type=\\"text\\" min=\\"0\\" class=\\"input\\"></div>"`;
+exports[`TheInput should render input 1`] = `
+"<div class=\\"input__container\\"><input id=\\"1\\" type=\\"text\\" min=\\"0\\" class=\\"input\\">
+  <!---->
+</div>"
+`;
 
-exports[`TheInput should render number input with value 1`] = `"<div class=\\"input__container\\"><input id=\\"1\\" type=\\"number\\" min=\\"0\\" class=\\"input\\"></div>"`;
+exports[`TheInput should render number input and check keypress 1`] = `
+"<div class=\\"input__container\\"><input id=\\"1\\" type=\\"number\\" min=\\"0\\" class=\\"input\\">
+  <div class=\\"input__error\\"><span class=\\"input__error-text\\">
+      Текст ошибки
+    </span></div>
+</div>"
+`;
+
+exports[`TheInput should render number input with error block 1`] = `
+"<div class=\\"input__container\\"><input id=\\"1\\" type=\\"number\\" min=\\"0\\" class=\\"input\\">
+  <div class=\\"input__error\\"><span class=\\"input__error-text\\">
+      Текст ошибки
+    </span></div>
+</div>"
+`;
+
+exports[`TheInput should render number input with value 1`] = `
+"<div class=\\"input__container\\"><input id=\\"1\\" type=\\"number\\" min=\\"0\\" class=\\"input\\">
+  <!---->
+</div>"
+`;

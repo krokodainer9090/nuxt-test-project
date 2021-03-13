@@ -7,7 +7,12 @@ import { shallowMount, Wrapper } from '@vue/test-utils';
 // Constants
 const CLASS_NAME = '.input';
 const newValue = '13';
-const notNumberValue = 'gregre';
+
+const validationType = {
+  name: 'lessOrEqualNumber',
+  value: 55
+};
+const errorText = 'Текст ошибки';
 
 describe('TheInput', () => {
   const mountFunction: (options?: Object) => Wrapper<any> = (options = {}) => {
@@ -47,18 +52,20 @@ describe('TheInput', () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('should render number input and check keypress', async () => {
+  it('should render number input with error block', async () => {
     const wrapper = mountFunction({
       propsData: {
         type: 'number',
-        value: '222'
+        value: '222',
+        validationType,
+        errorText
       }
     });
     const input = wrapper.find(CLASS_NAME);
     await input.trigger('keypress');
 
-    // @ts-ignore
-    input.element.value = notNumberValue;
-    await input.trigger('keypress');
+    // Check error render
+    await input.trigger('input');
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });
